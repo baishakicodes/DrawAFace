@@ -5,13 +5,24 @@ public class FaceDrawing {
     public FaceDrawing(String[][] faceFeatures){
         this.faceFeatures=faceFeatures;
     }
-    public void edit(String replace, int row, int column){
-        for(int i=0; i<faceFeatures.length; i++){
-            for(int j=0; j<faceFeatures[i].length;j++ ){
-                if(faceFeatures[i][j]== faceFeatures[row][column]){
-                    
-                }
+    public void fill(String str){
+        for(int r=0; r<faceFeatures.length; r++){
+            for(int c=0; c<faceFeatures[r].length; c++){
+                faceFeatures[r][c]=str;
             }
         }
+    }
+    public void edit(String replace, int row, int column){
+       faceFeatures[row][column]=replace;
+    }
+    public String toString(){
+        String newString="";
+        for(int r=0; r<faceFeatures.length;r++){
+            for(int c=0; r<faceFeatures[r].length;c++){
+               newString=newString+faceFeatures[r][c];
+            }
+            newString = newString + "\n";
+        }
+        return newString;
     }
 }
