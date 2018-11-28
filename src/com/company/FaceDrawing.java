@@ -13,13 +13,13 @@ public class FaceDrawing {
         }
     }
     public void edit(String replace, int row, int column){
-       faceFeatures[row][column]=replace;
+        faceFeatures[row][column]=replace;
     }
     public String toString(){
         String newString="";
         for(int r=0; r<faceFeatures.length;r++){
-            for(int c=0; r<faceFeatures[r].length;c++){
-               newString=newString+faceFeatures[r][c];
+            for(int c=0; c<faceFeatures[r].length;c++){
+               newString= newString + faceFeatures[r][c];
             }
             newString = newString + "\n";
         }
